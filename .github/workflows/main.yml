@@ -15,6 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: 'wb sign'
-        run: bash ./wb.sh
-      
+      # Runs a single command using the runners shell
+      - name: 'Set up Python'
+        uses: actions/setup-python@v1
+        with:
+           python-version: 3.7
+      - name: 'Install requirements'
+        run: pip install -r ./Spider/requirements.txt
+      - name: 'Working'
+        run: |
+          sudo cp -p ./chrome/chromedriver /usr/bin/
+          chmod -R 777 /usr/bin/chromedriver
+          python ./Spider/test.py
+         
