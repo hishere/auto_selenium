@@ -14,7 +14,7 @@ chrome_options.add_argument('--disable-dev-shm-usage')
 chromedriver = "/usr/bin/chromedriver"
 os.environ["webdriver.chrome.driver"] = chromedriver
 driver = webdriver.Chrome(chrome_options=chrome_options,executable_path=chromedriver)
-driver.get("https://bsy-cdn-zhgame.yunyungquan.com/pengpengqiu/index.html?openid=opua_jrbKwEGa4xESBuQMqUnOhUw&activeid=232&_t=12")
+driver.get("https://bsy-cdn-zhgame.yunyungquan.com/pengpengqiu/index.html?openid=opua_jgFjDMnz7ufTn4M3I-BmMsE&activeid=243&_t=12")
 time.sleep(10)
 ActionChains(driver).move_by_offset(400, 270).click().perform()#开始
 time.sleep(25)
@@ -27,8 +27,8 @@ time.sleep(27)
 ActionChains(driver).move_by_offset(1, 0).click().perform()#25分
 #print(driver.title)
 time.sleep(38)
-x = driver.get_screenshot_as_base64()
-#image = base64.b64decode(x)
-print(x)
+#x = driver.get_screenshot_as_base64()#打印64图片
+#image = base64.b64decode(x)#看是否点击对了
+#print(x)
 time.sleep(2)
 driver.quit()
