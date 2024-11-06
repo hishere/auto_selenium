@@ -1,0 +1,29 @@
+# This is a basic workflow to help you get started with Actions
+
+name: 'open chrome do something'
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow
+  #schedule:
+    - cron: '* 3 * * *'
+     
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  bot:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      # Runs a single command using the runners shell
+      - name: 'Set up Python'
+        uses: actions/setup-python@v1
+        with:
+           python-version: 3.7
+      - name: 'Install requirements'
+        run: pip install -r ./Spider/requirements.txt
+      - name: 'Working'
+        run: |
+          sudo cp -p ./chrome/chromedriver /usr/bin/
+          chmod -R 777 /usr/bin/chromedriver
+          python ./Spider/test1.py
+         
