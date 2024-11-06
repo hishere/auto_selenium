@@ -19,7 +19,6 @@ driver.get("https://bsy-cdn-zhgame.yunyungquan.com/pengpengqiu/index.html?openid
 #print(driver.title)
 x = driver.get_screenshot_as_base64()
 image = base64.b64decode(x)
-im=io.BytesIO(image)
-print(im)
+print(x)
 time.sleep(20)
 driver.quit()

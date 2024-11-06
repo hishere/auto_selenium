@@ -17,6 +17,7 @@ driver = webdriver.Chrome(chrome_options=chrome_options,executable_path=chromedr
 driver.get("https://bsy-cdn-zhgame.yunyungquan.com/pengpengqiu/index.html?openid=opua_jrbKwEGa4xESBuQMqUnOhUw&activeid=232&_t=12")
 #ActionChains(driver).move_by_offset(200, 100).click().perform() 
 #print(driver.title)
+time.sleep(10)
 x = driver.get_screenshot_as_base64()
 image = base64.b64decode(x)
 print(x)
