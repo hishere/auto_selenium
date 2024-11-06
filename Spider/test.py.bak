@@ -4,6 +4,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 import os
 import time
 import base64
+import io
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--headless')
@@ -18,6 +19,7 @@ driver.get("https://bsy-cdn-zhgame.yunyungquan.com/pengpengqiu/index.html?openid
 #print(driver.title)
 x = driver.get_screenshot_as_base64()
 image = base64.b64decode(x)
-print(image)
+im=io.BytesIO(image)
+print(im)
 time.sleep(20)
 driver.quit()
