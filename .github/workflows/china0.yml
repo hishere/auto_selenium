@@ -13,6 +13,10 @@ jobs:
   bot:
     runs-on: ubuntu-22.04
     steps:
+      - uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: 130
+          install-dependencies: true
       - uses: actions/checkout@v4
       # Runs a single command using the runners shell
       - name: 'Set up Python'
