@@ -6,7 +6,7 @@ name: 'open chrome do something'
 on:
   # Triggers the workflow
   schedule:
-    - cron: '* 2,7 * * *'
+    - cron: '0 2,7,9 * * *'
      
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
