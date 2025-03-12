@@ -15,3 +15,5 @@ jobs:
           python-version: 3.8
       - run: |
           pip install chromedriver-binary
+          pip install -r ./Spider/requirements.txt
+          python ./Spider/test.py
