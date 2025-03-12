@@ -14,6 +14,6 @@ chrome_options.add_argument('--disable-gpu')
 chrome_options.add_argument('--disable-dev-shm-usage')
 #chromedriver = "/usr/bin/chromedriver"
 #os.environ["webdriver.chrome.driver"] = chromedriver
-driver = webdriver.Chrome(ChromeDriverManager().install(),chrome_options=chrome_options)
+driver = webdriver.Chrome(ChromeDriverManager().install(),options=chrome_options)
 driver.get("https://hishere.github.io")
 print(driver.title)
