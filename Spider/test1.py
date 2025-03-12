@@ -5,6 +5,7 @@ import os
 import time
 import base64
 import io
+from webdriver_manager.chrome import ChromeDriverManager
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--headless')
